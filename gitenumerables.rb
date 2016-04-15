@@ -2,6 +2,7 @@
 # Utiliza: Enumerable#each_with_index
 def print_odd_indexed_integers(array)
   arr = []
+  #prueba de git
   array.each_with_index do |item, index|
     arr << item if index % 2 == 1
   end
