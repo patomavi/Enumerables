@@ -42,6 +42,11 @@ end
 # Dado un array de string reorganizalo en grupos de tres y ordénalos alfabéticamente.  
 # Utiliza: Enumerable#each_slice
 def sorted_triples(array)
+  inside = []
+  array.each_slice(3) do |a| 
+    inside.push(a.sort!)
+  end
+  inside
 end
 
 # Driver code... no modifiques nada de este código 
@@ -59,5 +64,9 @@ puts add_bang(["hi", "mom"]) == ["hi!", "mom!"]
 
 puts sum([1, 1, 2, 3, 5]) == 12
 
-words = %w(De esta simple manera se puede reorganizar una oración)  
-p sorted_triples(words) == [["De", "esta", "simple"], ["manera", "puede", "se"], ["oración", "reorganizar", "una"]]  
+words = %w(De esta simple manera se puede reorganizar una oracion)  
+p sorted_triples(words) == [["De", "esta", "simple"], ["manera", "puede", "se"], ["oracion", "reorganizar", "una"]]  
+
+
+# words = %w(De esta simple manera se puede reorganizar una oración)  
+# p sorted_triples(words)
