@@ -34,6 +34,8 @@ end
 # Utiliza: Enumerable#reduce
 # Repite el ejercicio con Enumerable#inject
 def sum(array)
+  #array.reduce(:+)
+  array.inject { |sum, num| sum + num}
 end
 
 
